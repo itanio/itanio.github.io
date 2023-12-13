@@ -20,7 +20,7 @@
 
 <H1> THIS IS A TETING PAGE FOR TIKTOK PIXEL DEVELOPER MODE SETUP</H1>
 <H2>Below is a inputbox for email</H2>
-<input id="emailInput" type="text" value="Enter your email here" />
+<input id="emailInput" type="email" placeholder="Enter your email here" />
   
 <H2>Below is a button trigger complePayment manualy</H1>
 <button id="subButton">Subscribe</button>
@@ -31,10 +31,12 @@
 <script type="text/javascript">
 document.getElementById("subButton").onclick = function(){
     ttq.identify({
-    email: document.getElementById("emailInput").value,
-})
+        email: document.getElementById("emailInput").value,
+    });
     ttq.track('Subscribe',{
-    })
+    });
+    document.getElementById("emailInput").value="";
+    alert("Subscribed!");
  }
 </script>
 
