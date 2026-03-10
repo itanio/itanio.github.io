@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sam Itani - Open Source - Projects, Apps &amp; Tools</title>
+    <style>
+      :root {
+        --primary-color: #3b84aa;
+        --secondary-color: #13b8a7;
+        --header-color: #0f766e;
+        --text-color: #0b0b0a;
+        --background-color: #fff;
+        --card-background: #ecf3f6;
+        --border-color: #08253a;
+      }
+
+      a {
+        color: var(--primary-color);
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color: var(--secondary-color);
+      }
+
+      body {
+        font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        padding: 1rem 2rem;
+        text-align: left;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin: 0.25em 0 0 0;
+        font-size: 2.5em;
+      }
+
+      header h2 {
+        margin: 0 0 0.5em 0;
+      }
+
+      nav {
+        background-color: var(--primary-color);
+        padding: 0.75rem 0;
+        margin-bottom: 0.25rem;
+        text-align: left;
+        padding-left: 2rem;
+        border: 2px solid var(--border-color);
+        border-left: 0;
+        border-right: 0;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: row;
+        gap: 0.75rem;
+      }
+
+      nav a {
+        color: white;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        padding: 0.25rem 0.75rem;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+        border: 2px solid var(--background-color);
+        box-shadow: 0px 3px 3px var(--border-color);
+      }
+
+      nav a:hover {
+        background-color: var(--card-background);
+        color: var(--border-color);
+      }
+
+      main {
+        flex: 1;
+        padding: 2rem;
+        max-width: 65ch;
+        background-color: var(--background-color);
+      }
+
+      .intro-section {
+        text-align: left;
+        margin-bottom: 2rem;
+        padding-bottom: 1.25rem;
+        font-size: 1.25rem;
+        border-bottom: 2px solid var(--header-color);
+        line-height: 1.15em;
+      }
+
+      .intro-section h3 {
+        color: var(--header-color);
+        margin-top: 0;
+        margin-bottom: 0.5em;
+      }
+
+      .intro-section p {
+        margin: 0 0 0.5em 0;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .project-card {
+        background-color: var(--card-background);
+        border: 2px solid var(--border-color);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .project-card:hover {
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      .project-card h3 {
+        background-color: var(--primary-color);
+        color: white;
+        border-bottom: 2px solid var(--border-color);
+        padding: 0.5rem 1.25rem;
+        margin: 0;
+        text-shadow: 0px 2px 2px var(--border-color);
+      }
+
+      .project-card:hover h3 {
+        background-color: var(--secondary-color);
+      }
+
+      .project-card .content {
+        padding: 1.25rem 1.25rem;
+      }
+
+      .project-card p {
+        font-size: 1rem;
+        color: var(--border-color);
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+
+      .project-card a.btn {
+        display: inline-block;
+        background-color: var(--background-color);
+        color: var(--border-color);
+        padding: 0.25rem 1rem;
+        border-radius: 8px;
+        text-decoration: none;
+        margin-top: 0.5rem;
+        transition: background-color 0.2s ease;
+        border: 2px solid var(--border-color);
+        box-shadow: 0px 2px 2px var(--border-color);
+      }
+
+      .project-card a.btn:hover {
+        background-color: var(--secondary-color);
+        color: var(--background-color);
+      }
+
+      footer {
+        background-color: var(--border-color);
+        color: var(--card-background);
+        text-align: left;
+        padding: 1rem 2rem;
+        margin-top: auto;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      footer p {
+        max-width: 65ch;
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2em;
+        }
+        .intro-section p {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+        }
+        main {
+          padding: 0 2rem;
+          margin: 1rem auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sam Itani - Open Source</h1>
+      <h2>Projects, Apps &amp; Tools</h2>
+    </header>
+
+    <nav>
+      <a href="https://github.com/itanio">GitHub: itanio</a>
+      <a href="https://samitani.net">Portfolio: samitani.net</a>
+    </nav>
+
+    <main>
+      <section class="intro-section">
+        <h3>Introduction</h3>
+        <p>
+          This page is a partial index of my OSS projects, web applications, and
+          quick experiments.
+        </p>
+        <p>
+          If you'd like to explore further, I've included links to the related
+          repos.
+        </p>
+      </section>
+
+      <section id="projects">
+        <div class="project-grid">
+          <div class="project-card">
+            <h3>named-color-picker</h3>
+            <div class="content">
+              <p>
+                A page showcasing the 164 W3C named-colors in the CSS data type
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/named-color"
+                  >&lt;named-color&gt;</a
+                >.
+              </p>
+              <a class="btn" href="./named-color-picker" target="_blank"
+                >Demo</a
+              >
+              <a
+                class="btn"
+                href="https://github.com/itanio/named-color-picker"
+                target="_blank"
+                >GitHub Repo</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Software on this site, unless otherwise indicated within its repository,
+        is available for use under the
+        <a href="https://github.com/itanio/itanio.github.io/blob/main/LICENSE"
+          >GNU General Public License v3.0</a
+        >
+      </p>
+      <p>&copy; 2026 Sam Itani.</p>
+    </footer>
+  </body>
+</html>
